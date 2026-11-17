@@ -15,6 +15,6 @@ SECTIONS {
   _sidata = LOADADDR(.data);
   .data : { . = ALIGN(4); _sdata = .; *(.data*) . = ALIGN(4); _edata = .; } > RAM AT > FLASH
   .bss (NOLOAD) : { . = ALIGN(4); _sbss = .; *(.bss*) *(COMMON) . = ALIGN(4); _ebss = .; } > RAM
-  .heap_stack (NOLOAD) : { . = ALIGN(8); end = .; _end = .; . += 0x800; . += 0x2000; } > RAM
+  .heap_stack (NOLOAD) : { . = ALIGN(8); end = .; _end = .; . += 0x800; _heap_end = .; . += 0x2000; } > RAM
   .ARM.attributes 0 : { *(.ARM.attributes) }
 }

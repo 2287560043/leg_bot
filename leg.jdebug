@@ -7,5 +7,12 @@ void OnProjectLoad(void) {
   Project.SetTIFSpeed("1 MHz");
   Project.SetOSPlugin("FreeRTOSPlugin_Cortex-M");
   File.Open("build/leg.elf");
+  Window.Show("Terminal");
   Edit.SysVar(VAR_HSS_SPEED, 200);
+  Window.Add("Watched Data", "g_debug.imu_status");
+  Window.Add("Watched Data", "g_debug.not_ready_bits");
+  Window.Add("Watched Data", "g_log_dropped");
+  Window.Add("Data Sampling", "g_debug.attitude_deg[0]");
+  Window.Add("Data Sampling", "g_debug.attitude_deg[1]");
+  Window.Add("Data Sampling", "g_debug.attitude_deg[2]");
 }

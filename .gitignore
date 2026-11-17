@@ -35,7 +35,7 @@
 *.jdebug.user.*
 *.jdebug.log
 *.jlinklog
-/logs/
+logs/
 
 # Python caches
 __pycache__/

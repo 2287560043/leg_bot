@@ -38,5 +38,5 @@ update('Core/Inc/stm32h7xx_hal_conf.h', lambda s: s.replace('/* #define HAL_TIM_
 (root / 'Core/Inc/FreeRTOSConfig.h').write_text(
     '/* CubeMX-facing entry; maintained settings live in rtos_config.h. */\n'
     '#pragma once\n#include "rtos_config.h"\n')
-(root / 'CMakeLists.txt').write_text('cmake_minimum_required(VERSION 3.22)\nproject(leg LANGUAGES C ASM)\ninclude(cmake/firmware.cmake)\n')
+(root / 'CMakeLists.txt').write_text('cmake_minimum_required(VERSION 3.22)\nproject(leg LANGUAGES C CXX ASM)\ninclude(cmake/firmware.cmake)\n')
 print('CubeMX integration synchronized; framework owns RTOS tasks, vectors and TIM6 timebase.')

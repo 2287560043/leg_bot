@@ -1797,7 +1797,7 @@ HAL_StatusTypeDef HAL_FDCAN_ResetClockCalibrationState(FDCAN_HandleTypeDef *hfdc
   * @param  hfdcan pointer to an FDCAN_HandleTypeDef structure that contains
   *         the configuration information for the specified FDCAN.
   * @param  Counter clock calibration counter.
-  *         This parameter can be a value of @arg FDCAN_calibration_counter.
+  *         This parameter can be a value of @arg FDCAN_calibration_cnter.
   * @retval Value clock calibration counter value
   */
 uint32_t HAL_FDCAN_GetClockCalibrationCounter(const FDCAN_HandleTypeDef *hfdcan, uint32_t Counter)
@@ -1806,7 +1806,7 @@ uint32_t HAL_FDCAN_GetClockCalibrationCounter(const FDCAN_HandleTypeDef *hfdcan,
   UNUSED(hfdcan);
 
   /* Check function parameters */
-  assert_param(IS_FDCAN_CALIBRATION_COUNTER(Counter));
+  assert_param(IS_FDCAN_calibration_cntER(Counter));
 
   if (Counter == FDCAN_CALIB_TIME_QUANTA_COUNTER)
   {

@@ -341,6 +341,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* DM02 BMI088: ACC CS PC0, GYRO CS PC3, inactive high. */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0 | GPIO_PIN_3, GPIO_PIN_SET);
+  GPIO_InitTypeDef imu_cs = {0};
+  imu_cs.Pin = GPIO_PIN_0 | GPIO_PIN_3;
+  imu_cs.Mode = GPIO_MODE_OUTPUT_PP;
+  imu_cs.Pull = GPIO_NOPULL;
+  imu_cs.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(GPIOC, &imu_cs);
 
   /* USER CODE END MX_GPIO_Init_2 */
 }

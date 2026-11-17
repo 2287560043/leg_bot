@@ -912,7 +912,7 @@ typedef  void (*pFDCAN_TT_GlobalTimeCallbackTypeDef)(FDCAN_HandleTypeDef *hfdcan
   * @}
   */
 
-/** @defgroup FDCAN_calibration_counter FDCAN Calibration Counter
+/** @defgroup FDCAN_calibration_cnter FDCAN Calibration Counter
   * @{
   */
 #define FDCAN_CALIB_TIME_QUANTA_COUNTER  ((uint32_t)0x00000000U) /*!< Time Quanta Counter             */
@@ -2345,7 +2345,7 @@ HAL_FDCAN_StateTypeDef HAL_FDCAN_GetState(const FDCAN_HandleTypeDef *hfdcan);
                                      ((OPERATION) == FDCAN_TIMEOUT_RX_FIFO1     ))
 #define IS_FDCAN_CALIBRATION_FIELD_LENGTH(LENGTH) (((LENGTH) == FDCAN_CALIB_FIELD_LENGTH_32) || \
                                                    ((LENGTH) == FDCAN_CALIB_FIELD_LENGTH_64))
-#define IS_FDCAN_CALIBRATION_COUNTER(COUNTER) (((COUNTER) == FDCAN_CALIB_TIME_QUANTA_COUNTER ) || \
+#define IS_FDCAN_calibration_cntER(COUNTER) (((COUNTER) == FDCAN_CALIB_TIME_QUANTA_COUNTER ) || \
                                                ((COUNTER) == FDCAN_CALIB_CLOCK_PERIOD_COUNTER) || \
                                                ((COUNTER) == FDCAN_CALIB_WATCHDOG_COUNTER    ))
 #define IS_FDCAN_TT_REFERENCE_MESSAGE_PAYLOAD(PAYLOAD) (((PAYLOAD) == FDCAN_TT_REF_MESSAGE_NO_PAYLOAD ) || \
