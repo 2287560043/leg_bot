@@ -1,0 +1,11 @@
+/* Build with the README command before opening this project.
+ * Native J-Link USB/SWD; no probe serial number is pinned. */
+void OnProjectLoad(void) {
+  Project.SetDevice("STM32H723VG");
+  Project.SetHostIF("USB", "0");
+  Project.SetTargetIF("SWD");
+  Project.SetTIFSpeed("1 MHz");
+  Project.SetOSPlugin("FreeRTOSPlugin_Cortex-M");
+  File.Open("build/leg.elf");
+  Edit.SysVar(VAR_HSS_SPEED, 200);
+}
